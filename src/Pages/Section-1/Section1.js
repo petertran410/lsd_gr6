@@ -4,7 +4,7 @@ import animateSrc from "./Industry.json";
 
 export default function Section1() {
   return (
-    <div className="flex justify-around items-center mt-28">
+    <div className="flex justify-around items-center mt-28 mb-36">
       <div className="text-2xl flex flex-col gap-y-10 w-50">
         <header className="text-5xl">I. Khái niệm công nghiệp hóa hiện đại hóa</header>
         <span className="text-4xl">

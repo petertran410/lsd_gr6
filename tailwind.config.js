@@ -1,8 +1,13 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: ["./src/**/*.{html,js}"],
-  theme: {
-    extend: {},
+export const content = ["./src/**/*.{html,js}"];
+export const theme = {
+  extend: {},
+  listStyleType: {
+    none: "none",
+    disc: "disc",
+    decimal: "decimal",
+    square: "square",
+    roman: "upper-roman",
   },
-  plugins: [],
 };
+export const plugins = [];
