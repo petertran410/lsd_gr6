@@ -16,7 +16,7 @@ function Welcome() {
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState("");
   const [Delta, setDelta] = useState(300 - Math.random() * 100);
-  const period = 1000;
+  const period = 700;
 
   const toRotate = useMemo(
     () => ["Welcome to our presentation", "We are group 6"],
