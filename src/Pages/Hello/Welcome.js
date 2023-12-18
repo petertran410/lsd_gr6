@@ -1,5 +1,5 @@
 import Lottie from "lottie-react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import animateSrc from "./Merry.json";
 
 function Welcome() {
@@ -10,17 +10,17 @@ function Welcome() {
   const [Delta, setDelta] = useState(300 - Math.random() * 100);
   const period = 1000;
 
-  useEffect(() => {
-    let ticker = setInterval(() => {
-      tick();
-    }, Delta);
+  // useEffect(() => {
+  //   let ticker = setInterval(() => {
+  //     tick();
+  //   }, Delta);
 
-    return () => {
-      clearInterval(ticker);
-    };
-  }, [text, Delta, tick]);
+  //   return () => {
+  //     clearInterval(ticker);
+  //   };
+  // }, [text, Delta, tick]);
 
-  const tick = () => {
+  const tick = useCallback(() => {
     let i = loopNum % toRotate.length;
     let fullText = toRotate[i];
     let updatedText = isDeleting
@@ -40,7 +40,25 @@ function Welcome() {
       setLoopNum(loopNum + 1);
       setDelta(500);
     }
-  };
+  }, [
+    loopNum,
+    toRotate,
+    isDeleting,
+    text,
+    setDelta,
+    setIsDeleting,
+    setLoopNum,
+  ]);
+
+  useEffect(() => {
+    let ticker = setInterval(() => {
+      tick();
+    }, Delta);
+
+    return () => {
+      clearInterval(ticker);
+    };
+  }, [Delta, tick]);
 
   return (
     <div className="flex flex-col items-center">
