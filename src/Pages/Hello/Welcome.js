@@ -7,18 +7,18 @@ function Welcome() {
   const [isDeleting, setIsDeleting] = useState(false);
   const toRotate = ["Welcome to our presentation", "We are group 6"];
   const [text, setText] = useState("");
-  const [delta, setDelta] = useState(300 - Math.random() * 100);
+  const [Delta, setDelta] = useState(300 - Math.random() * 100);
   const period = 1000;
 
   useEffect(() => {
     let ticker = setInterval(() => {
       tick();
-    }, delta);
+    }, Delta);
 
     return () => {
       clearInterval(ticker);
     };
-  }, [text]);
+  }, [text, Delta, tick]);
 
   const tick = () => {
     let i = loopNum % toRotate.length;
