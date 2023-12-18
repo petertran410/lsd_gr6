@@ -1,10 +1,10 @@
 import React from "react";
 
-export default function Section3() {
+export default function Section4() {
   return (
     <div className="flex flex-col items-center mt-28">
       <div>
-        <header className="text-5xl font-bold">Sau 1986 đến nay:</header>
+        <header className="text-5xl font-bold">2006 - 2020:</header>
       </div>
       <div className="mt-10">
         <dl className="space-y-4">
@@ -24,18 +24,18 @@ export default function Section3() {
           </dd>
           <dt className="text-3xl">1991 - 2001:</dt>
           <dd className="text-2xl">
-            <strong> - </strong>Chủ trương
-            <strong>"Mở mang kinh tế dịch vụ." (1991)</strong> tới
-            <strong>“kinh tế dịch vụ” (1994)</strong> và
+            <strong> - </strong>Chủ trương{" "}
+            <strong>"Mở mang kinh tế dịch vụ." (1991)</strong> tới{" "}
+            <strong>“kinh tế dịch vụ” (1994)</strong> và{" "}
             <strong>“phát triển kinh tế trí thức” (2001)</strong>
           </dd>
           <dd className="text-2xl">
-            <strong> - </strong> Chuyển từ
-            <strong>cơ chế kế hoạch hóa tập trung</strong> sang
+            <strong> - </strong> Chuyển từ{" "}
+            <strong>cơ chế kế hoạch hóa tập trung</strong> sang{" "}
             <strong>cơ chế thị trường.</strong>
           </dd>
           <dd className="text-2xl">
-            <strong> - </strong> Công nghiệp hóa và hiện đại hóa là
+            <strong> - </strong> Công nghiệp hóa và hiện đại hóa là{" "}
             <strong>con đường thoát khỏi tụt hậu.</strong>
           </dd>
         </dl>
