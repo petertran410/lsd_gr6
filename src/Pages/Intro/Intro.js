@@ -4,9 +4,7 @@ import animateSrc from "./History.json";
 import { motion } from "framer-motion";
 import {
   fadeIn,
-  slideIn,
   staggerChildren,
-  staggerContainer,
   textVariant,
 } from "../../motion/motion";
 
