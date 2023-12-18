@@ -1,4 +1,5 @@
 import "./App.css";
+import End from "./Pages/End/End";
 import Hello from "./Pages/Hello/Hello";
 import Intro from "./Pages/Intro/Intro";
 import Section1 from "./Pages/Section-1/Section1";
@@ -12,7 +13,7 @@ import Section7 from "./Pages/Section-7/Section7";
 function App() {
   return (
     <div className="bg-green-200">
-      <div className="container">
+      <div className="container mx-auto">
         <Hello />
         <Intro />
         <Section1 />
@@ -22,6 +23,7 @@ function App() {
         <Section5 />
         <Section6 />
         <Section7 />
+        <End />
       </div>
     </div>
   );

@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Section5() {
   return (
-    <div className="mt-28">
+    <div style={{marginTop: "200px"}}>
       <div className="text-5xl italic text-center font-bold">
         Nguyên nhân dẫn đến quá trình nhận thức của Đảng về công nghiệp hóa,
         hiện đại hóa.

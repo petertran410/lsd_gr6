@@ -6,7 +6,7 @@ import solution from "./Solution.json";
 
 export default function Section6() {
   return (
-    <div className="mt-28">
+    <div style={{marginTop: "200px"}}>
       <div className="text-5xl italic text-center font-bold">
         Ý nghĩa của sự nhận thức của Đảng về công nghiệp hóa, hiện đại hóa.
       </div>

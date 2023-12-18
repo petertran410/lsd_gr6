@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Section4() {
   return (
-    <div className="mt-28">
+    <div  style={{marginTop: "200px"}}>
       <i className="text-5xl flex flex-col items-center font-bold">
         2006 - 2020:
       </i>

@@ -4,11 +4,11 @@ import animateSrc from "./HeavyIndus.json";
 
 export default function Section2() {
   return (
-    <div className="flex flex-col items-center mt-28">
+    <div className="flex flex-col items-center" style={{marginTop: "200px"}}>
       <i className="text-5xl font-bold">
         Quá trình nhận thức của Đảng về công nghiệp hoá, hiện đại hoá
       </i>
-      <i className="text-3xl mt-7 font-bold">Trước 1986:</i>
+      <i className="text-3xl mt-5 font-bold">Trước 1986:</i>
       <div className="flex justify-around items-center">
         <div className="w-1/2 pl-4">
           <ul className="text-3xl font-normal list-disc">
@@ -25,7 +25,7 @@ export default function Section2() {
         </div>
         <div className="w-1/2">
           <div className="w-full justify-items-center items-center text-center">
-            <Lottie animationData={animateSrc} loop={true} />
+            <Lottie className="w-3/4" animationData={animateSrc} loop={true} />
           </div>
         </div>
       </div>

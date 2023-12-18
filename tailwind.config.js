@@ -9,5 +9,8 @@ export const theme = {
     square: "square",
     roman: "upper-roman",
   },
+  container: {
+    center: true,
+  },
 };
 export const plugins = [];

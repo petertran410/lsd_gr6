@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Section3() {
   return (
-    <div className="flex flex-col items-center mt-28">
+    <div className="flex flex-col items-center" style={{marginTop: "200px"}}>
       <i>
         <header className="text-5xl font-bold">Sau 1986 đến nay:</header>
       </i>

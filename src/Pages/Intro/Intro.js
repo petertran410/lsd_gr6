@@ -4,7 +4,7 @@ import animateSrc from "./Clock.json";
 
 export default function Intro() {
   return (
-    <div className="mt-28">
+    <div style={{marginTop: "200px"}}>
       <div className="text-2xl flex flex-col items-center gap-y-10">
         <span>Chiếc 107 cùng Giáo sư Trọng Hưng</span>
         <i className="text-6xl font-semibold">Phân tích Bối cảnh Lịch sử</i>
