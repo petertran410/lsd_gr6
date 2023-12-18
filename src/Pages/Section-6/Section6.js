@@ -3,14 +3,25 @@ import develop from "./Develop.json";
 import goDown from "./GoDown.json";
 import Lottie from "lottie-react";
 import solution from "./Solution.json";
+import { motion } from "framer-motion";
+import { fadeIn, staggerChildren } from "../../motion/motion";
 
 export default function Section6() {
   return (
-    <div style={{marginTop: "200px"}}>
-      <div className="text-5xl italic text-center font-bold">
+    <motion.div
+      initial="hidden"
+      whileInView="show"
+      variants={staggerChildren}
+      viewport={{ once: false, amount: 0.25 }}
+      style={{ marginTop: "200px" }}>
+      <motion.div
+        variants={fadeIn("down", "tween", 0.5, 0.5)}
+        className="text-5xl italic text-center font-bold">
         Ý nghĩa của sự nhận thức của Đảng về công nghiệp hóa, hiện đại hóa.
-      </div>
-      <div className="flex mt-10 items-center">
+      </motion.div>
+      <motion.div
+        variants={fadeIn("right", "tween", 0.8, 0.5)}
+        className="flex mt-10 items-center">
         <div className="w-1/2 space-y-4 text-2xl">
           <div className="pl-4 space-y-4">
             <span className="text-3xl font-bold italic">Ý nghĩa:</span>
@@ -78,7 +89,7 @@ export default function Section6() {
             <Lottie className="w-1/3 pt-5" animationData={solution} />
           </div>
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 }

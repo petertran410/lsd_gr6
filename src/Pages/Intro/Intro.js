@@ -25,7 +25,7 @@ export default function Intro() {
           Chiếc 107 cùng Giáo sư Trọng Hưng
         </motion.span>
         <motion.div
-          variants={fadeIn("up", "tween", 1.5, 0.5)}
+          variants={fadeIn("up", "tween", 0.5, 0.5)}
           className="text-6xl font-semibold italic">
           Phân tích Bối cảnh Lịch sử
         </motion.div>

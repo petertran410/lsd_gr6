@@ -1,13 +1,24 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { fadeIn, staggerChildren } from "../../motion/motion";
 
 export default function Section5() {
   return (
-    <div style={{marginTop: "200px"}}>
-      <div className="text-5xl italic text-center font-bold">
+    <motion.div
+      initial="hidden"
+      whileInView="show"
+      variants={staggerChildren}
+      viewport={{ once: false, amount: 0.25 }}
+      style={{ marginTop: "200px" }}>
+      <motion.div
+        variants={fadeIn("right", "tween", 0.5, 0.5)}
+        className="text-5xl italic text-center font-bold">
         Nguyên nhân dẫn đến quá trình nhận thức của Đảng về công nghiệp hóa,
         hiện đại hóa.
-      </div>
-      <div className="flex mt-10 items-center">
+      </motion.div>
+      <motion.div
+        variants={fadeIn("down", "tween", 0.8, 0.5)}
+        className="flex mt-10 items-center">
         <div className="flex flex-col text-2xl space-y-4">
           <span>
             <strong> - Tình hình chiến tranh còn tồn tại ở Việt Nam</strong> -
@@ -28,7 +39,7 @@ export default function Section5() {
             thế mạnh quốc gia, cũng như cung ứng lương thực cho cả nước.
           </span>
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 }

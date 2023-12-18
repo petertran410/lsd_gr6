@@ -1,12 +1,21 @@
 import React from "react";
+import { fadeIn, staggerChildren, zoomIn } from "../../motion/motion";
+import { motion } from "framer-motion";
 
 export default function Section4() {
   return (
-    <div  style={{marginTop: "200px"}}>
-      <i className="text-5xl flex flex-col items-center font-bold">
+    <motion.div
+      initial="hidden"
+      whileInView="show"
+      variants={staggerChildren}
+      viewport={{ once: false, amount: 0.25 }}
+      style={{ marginTop: "200px" }}>
+      <motion.i
+        variants={fadeIn("down", "tween", 0.5, 0.5)}
+        className="text-5xl flex flex-col items-center font-bold">
         2006 - 2020:
-      </i>
-      <div className="flex flex-col">
+      </motion.i>
+      <motion.div variants={zoomIn(0.8, 0.7)} className="flex flex-col">
         <div className="mt-10 flex flex-col space-y-4">
           <span className="text-2xl">
             <strong> - </strong> Thực hiện chủ trương{" "}
@@ -34,7 +43,7 @@ export default function Section4() {
             </strong>
           </span>
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 }
