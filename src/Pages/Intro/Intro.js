@@ -1,18 +1,38 @@
 import React from "react";
 import Lottie from "lottie-react";
-import animateSrc from "./Clock.json";
+import animateSrc from "./History.json";
+import { motion } from "framer-motion";
+import {
+  fadeIn,
+  slideIn,
+  staggerChildren,
+  staggerContainer,
+  textVariant,
+} from "../../motion/motion";
 
 export default function Intro() {
   return (
-    <div style={{marginTop: "200px"}}>
+    <motion.div
+      initial="hidden"
+      whileInView="show"
+      variants={staggerChildren}
+      viewport={{ once: false, amount: 0.25 }}
+      style={{ marginTop: "200px" }}>
       <div className="text-2xl flex flex-col items-center gap-y-10">
-        <span>Chiếc 107 cùng Giáo sư Trọng Hưng</span>
-        <i className="text-6xl font-semibold">Phân tích Bối cảnh Lịch sử</i>
-        <span>Giới thiệu về lớp học</span>
-        <div className="w-1/5">
+        <motion.span
+          variants={textVariant(0.2)}
+          className="text-3xl font-semibold italic">
+          Chiếc 107 cùng Giáo sư Trọng Hưng
+        </motion.span>
+        <motion.div
+          variants={fadeIn("up", "tween", 1.5, 0.5)}
+          className="text-6xl font-semibold italic">
+          Phân tích Bối cảnh Lịch sử
+        </motion.div>
+        <motion.div variants={fadeIn("up", "tween", 2, 0.5)} className="w-1/5">
           <Lottie animationData={animateSrc} loop={true} />
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 }

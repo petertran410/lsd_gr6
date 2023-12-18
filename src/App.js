@@ -1,6 +1,6 @@
 import "./App.css";
 import End from "./Pages/End/End";
-import Hello from "./Pages/Hello/Hello";
+import Welcome from "./Pages/Hello/Welcome";
 import Intro from "./Pages/Intro/Intro";
 import Section1 from "./Pages/Section-1/Section1";
 import Section2 from "./Pages/Section-2/Section2";
@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="bg-green-200">
       <div className="container mx-auto">
-        <Hello />
+        <Welcome />
         <Intro />
         <Section1 />
         <Section2 />
