@@ -1,15 +1,8 @@
 import Lottie from "lottie-react";
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useMemo } from "react";
 import animateSrc from "./Merry.json";
 
 function Welcome() {
-  const [loopNum, setLoopNum] = useState(0);
-  const [isDeleting, setIsDeleting] = useState(false);
-  const toRotate = ["Welcome to our presentation", "We are group 6"];
-  const [text, setText] = useState("");
-  const [Delta, setDelta] = useState(300 - Math.random() * 100);
-  const period = 1000;
-
   // useEffect(() => {
   //   let ticker = setInterval(() => {
   //     tick();
@@ -19,6 +12,16 @@ function Welcome() {
   //     clearInterval(ticker);
   //   };
   // }, [text, Delta, tick]);
+  const [loopNum, setLoopNum] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [text, setText] = useState("");
+  const [Delta, setDelta] = useState(300 - Math.random() * 100);
+  const period = 1000;
+
+  const toRotate = useMemo(
+    () => ["Welcome to our presentation", "We are group 6"],
+    []
+  );
 
   const tick = useCallback(() => {
     let i = loopNum % toRotate.length;
